@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Çizim İsteği</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            background-color: blue;
+            color: white;
+            font-size: 20px;
+            padding: 15px 30px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ne tür bir çizim istiyorsunuz?</h1>
+    <button onclick="getUserInput()">Create</button>
+    <p id="output"></p>
+
+    <script>
+        function getUserInput() {
+            let request = prompt("Nasıl bir çizim istiyorsun?");
+            if (request) {
+                document.getElementById("output").innerHTML = "Çizim isteğiniz alındı: " + request;
+                // Burada çizim yapma işlemi için AI entegrasyonu eklenebilir.
+            } else {
+                document.getElementById("output").innerHTML = "İstek iptal edildi.";
+            }
+        }
+    </script>
+</body>
+</html>
